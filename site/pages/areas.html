@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where We Serve | Bluestar Janitorial</title>
+<meta name="description" content="Where Blue Star Janitorial serves across Dallas–Fort Worth: Garland, Dallas, Plano, Frisco, Richardson, McKinney, Fort Worth, Irving, Arlington, Coppell, Denton, Lake Highlands, Southlake, and Haltom City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/bluestar-header.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fdf8e6; color: #0b0232; font-family: Sora, sans-serif; }
+  a { color: inherit; }
+  .bar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 28px; background: rgba(253,248,230,.94); backdrop-filter: blur(10px); }
+  .bar img { height: 28px; width: auto; display: block; }
+  .bar nav { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; font-weight: 700; }
+  .bar nav a { text-decoration: none; color: #0b0232; }
+  .bar nav a.on { color: #4219fa; }
+  .call { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #4219fa; border-radius: 12px; padding: 10px 14px; color: #4219fa; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .hero { position: relative; padding: 72px 28px 90px; text-align: center; background: #4219fa; color: #fffdf6; }
+  .hero .eyebrow { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #ffcc37; }
+  .hero h1 { margin: 0; font-family: Anton, sans-serif; font-size: clamp(56px, 8vw, 104px); font-weight: 400; line-height: .9; letter-spacing: .5px; }
+  .hero p { max-width: 720px; margin: 16px auto 0; font-size: 18px; line-height: 1.5; color: rgba(253,248,230,.9); }
+  .wave { display: block; width: 100%; height: 48px; margin-top: -1px; background: #fdf8e6; clip-path: polygon(0 100%, 0 55%, 4% 70%, 8% 48%, 12% 72%, 16% 42%, 20% 68%, 24% 38%, 28% 66%, 32% 40%, 36% 70%, 40% 36%, 44% 68%, 48% 42%, 52% 72%, 56% 38%, 60% 66%, 64% 44%, 68% 70%, 72% 40%, 76% 68%, 80% 42%, 84% 72%, 88% 38%, 92% 66%, 96% 46%, 100% 70%, 100% 100%); }
+  .jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 1100px; margin: -18px auto 8px; padding: 0 20px; position: relative; z-index: 2; }
+  .jump a { border-radius: 999px; background: #fff; border: 1px solid rgba(11,2,50,.12); padding: 8px 14px; font-size: 13px; font-weight: 700; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 18px 20px 48px; display: grid; gap: 22px; }
+  article { background: #fffdf8; border-radius: 28px; padding: 26px; box-shadow: 0 14px 34px rgba(11,2,50,.06); }
+  article h2 { margin: 0; font-family: Anton, sans-serif; font-size: 44px; font-weight: 400; letter-spacing: .4px; }
+  .note { margin: 6px 0 0; color: #5c5678; }
+  .photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 8px; }
+  .photos a { display: block; border-radius: 18px; overflow: hidden; background: #efe8d4; aspect-ratio: 4/3; }
+  .photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .jobs-h { margin: 8px 0 10px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #4219fa; }
+  .svc-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 8px; }
+  .svc-list li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 18px; background: #f3efff; border-radius: 14px; padding: 12px 14px; }
+  .svc-list a { color: #0b0232; font-weight: 700; text-decoration: none; font-size: 15px; }
+  .svc-list a:hover { color: #4219fa; }
+  .svc-list span { color: #5c5678; font-size: 14px; }
+  .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; }
+  .groups h3 { margin: 0 0 6px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #8a6412; }
+  .groups p { margin: 0; font-size: 15px; line-height: 1.5; }
+  .cta { margin: 10px 20px 40px; border-radius: 28px; background: #ffcc37; padding: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1120px; margin-left: auto; margin-right: auto; }
+  .cta strong { display: block; font-family: Anton, sans-serif; font-size: 36px; font-weight: 400; letter-spacing: .4px; }
+  .cta span { color: #3c3654; }
+  .cta a { background: #4219fa; color: #fff; text-decoration: none; font-weight: 700; border-radius: 14px; padding: 14px 18px; white-space: nowrap; }
+  footer { padding: 8px 20px 36px; text-align: center; color: #5c5678; font-size: 14px; }
+  @media (max-width: 800px) {
+    .bar { flex-wrap: wrap; padding: 12px 14px; }
+    .photos, .groups { grid-template-columns: 1fr 1fr; }
+    .cta { flex-direction: column; align-items: flex-start; margin: 10px 14px 28px; }
+    .hero { padding: 48px 16px 70px; }
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <a href="/"><img src="/_fc/images/6Gmh6tbUdEj47iJkB6PLBNJwE.svg?width=163&height=33" alt="Bluestar Janitorial"></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/results">Jobs We Done</a>
+    <a class="on" href="/areas">Where We Serve</a>
+    <a href="/contact">Contact</a>
+    <a href="/book">Book</a>
+  </nav>
+  <a class="call" href="tel:+14692611485">(469) 261-1485</a>
+</header>
+<section class="hero">
+  <p class="eyebrow">Dallas–Fort Worth</p>
+  <h1>Where We Serve</h1>
+  <p>Commercial cleaning across 14 cities. Open a city for the neighborhoods, roads, businesses, schools, and hospitals our crew covers.</p>
+</section>
+<div class="wave"></div>
+<div class="jump" id="jump"></div>
+<main class="wrap" id="cities"></main>
+<section class="cta">
+  <div>
+    <strong>Need a crew in your city?</strong>
+    <span>Free estimate. Open 7 days, nights and weekends.</span>
+  </div>
+  <a href="tel:+14692611485">Call Now</a>
+</section>
+<footer>105 W Marguerita Dr, Garland, TX 75040 · Family owned · Serving DFW</footer>
+<script id="area-data" type="application/json">[{"city": "Garland, TX", "note": "Home base. 105 W Marguerita Dr.", "groups": [["Neighborhoods", "Downtown Garland, Firewheel, Club Hill, Duck Creek, Springpark, Oakridge, Embree, Shores of Eastern Hills, Buckingham North"], ["Main roads", "Broadway Boulevard, Northwest Highway, Belt Line Road, Arapaho Road, Jupiter Road, Garland Avenue, Rowlett Road, Centerville Road, Duck Creek Drive"], ["Commercial", "Firewheel Town Center, Downtown Garland Square, Plaza Theatre, Granville Arts Center, North Garland Avenue commercial area"], ["Schools", "Garland High School, North Garland High School, Lakeview Centennial High School, South Garland High School, Richland College Garland Campus"], ["Hospitals", "Baylor Scott & White Medical Center – Garland, Methodist Richardson Medical Center (nearby), clinics along Broadway Boulevard"]]}, {"city": "Dallas, TX", "note": "", "groups": [["Neighborhoods", "Downtown Dallas, Uptown, Oak Lawn, Deep Ellum, Lake Highlands, Lakewood, East Dallas, North Dallas, West Dallas, Oak Cliff, Bishop Arts District, Preston Hollow, Far North Dallas, Design District"], ["Main roads", "I-35E, US-75, I-30, I-45, I-635, LBJ Freeway, Northwest Highway, Mockingbird Lane, Greenville Avenue, Lemmon Avenue, Preston Road, Forest Lane, Royal Lane"], ["Commercial", "Dallas Market Center, Dallas Design District, Galleria Dallas, NorthPark Center, Highland Park Village, Deep Ellum, Dallas Farmers Market"], ["Schools", "Southern Methodist University, University of Dallas, Dallas College El Centro, Dallas College Richland Campus, Booker T. Washington High School, Woodrow Wilson High School"], ["Hospitals", "Baylor University Medical Center, Parkland Memorial Hospital, UT Southwestern Medical Center, Children's Medical Center Dallas, Methodist Dallas Medical Center, Texas Health Presbyterian Hospital Dallas"]]}, {"city": "Plano, TX", "note": "", "groups": [["Neighborhoods", "Downtown Plano, Legacy West, Legacy Town Center, West Plano, East Plano, Willow Bend, Deerfield, Kings Ridge, Ridgeview Ranch, Preston Meadow"], ["Main roads", "US-75, Dallas North Tollway, Sam Rayburn Tollway, Preston Road, Coit Road, Custer Road, Independence Parkway, Parker Road, Spring Creek Parkway, Legacy Drive"], ["Commercial", "The Shops at Legacy, Legacy West, The Boardwalk at Granite Park, The Shops at Willow Bend, Downtown Plano Arts District"], ["Schools", "Plano Senior High School, Plano East Senior High School, Plano West Senior High School, Jasper High School, Collin College Plano Campus"], ["Hospitals", "Medical City Plano, Texas Health Presbyterian Hospital Plano, Baylor Scott & White Medical Center – Plano, Children's Medical Center Plano"]]}, {"city": "Frisco, TX", "note": "", "groups": [["Neighborhoods", "Frisco Square, Stonebriar, The Star District, Phillips Creek Ranch, Newman Village, Panther Creek, Richwoods, Grayhawk, Trails of West Frisco"], ["Main roads", "Dallas North Tollway, Preston Road, FM 423, Eldorado Parkway, Main Street, Lebanon Road, Teel Parkway, Custer Road, FM 720"], ["Commercial", "Stonebriar Centre, The Star, PGA Frisco, Frisco Square, Toyota Stadium, Grandscape (nearby)"], ["Schools", "Frisco High School, Wakeland High School, Centennial High School, Liberty High School, Independence High School, Collin College Frisco Campus"], ["Hospitals", "Medical City Frisco, Baylor Scott & White Medical Center – Centennial, Texas Health Frisco"]]}, {"city": "Richardson, TX", "note": "", "groups": [["Neighborhoods", "CityLine, Canyon Creek, Richardson Heights, Heights Park, Duck Creek, Prairie Creek, Breckinridge Park, Telecom Corridor, Spring Creek"], ["Main roads", "US-75, President George Bush Turnpike, Central Expressway, Belt Line Road, Campbell Road, Arapaho Road, Spring Valley Road, Renner Road, Coit Road"], ["Commercial", "CityLine, Richardson Telecom Corridor, Richardson Heights Shopping Center, Galatyn Park, Eisemann Center"], ["Schools", "University of Texas at Dallas, Richardson High School, Pearce High School, Berkner High School, JJ Pearce High School"], ["Hospitals", "Methodist Richardson Medical Center, Medical City Dallas (nearby), UT Southwestern clinics"]]}, {"city": "McKinney, TX", "note": "", "groups": [["Neighborhoods", "Historic Downtown McKinney, Craig Ranch, Stonebridge Ranch, Tucker Hill, Adriatica Village, Eldorado, Trinity Falls, Painted Tree, Virginia Parkway area"], ["Main roads", "US-75, US-380, Highway 5, Virginia Parkway, Eldorado Parkway, Custer Road, Lake Forest Drive, Hardin Boulevard, Stacy Road, McDonald Street"], ["Commercial", "Historic Downtown McKinney, Adriatica Village, Craig Ranch, Stonebridge Ranch, Allen Premium Outlets (nearby)"], ["Schools", "McKinney High School, McKinney North High School, McKinney Boyd High School, Collin College McKinney Campus"], ["Hospitals", "Medical City McKinney, Baylor Scott & White Medical Center – McKinney, Methodist McKinney Hospital"]]}, {"city": "Fort Worth, TX", "note": "", "groups": [["Neighborhoods", "Downtown Fort Worth, Cultural District, West 7th, TCU area, Fairmount, Near Southside, Ridglea, Alliance, Fossil Creek, Keller area, Wedgwood, Hulen area"], ["Main roads", "I-35W, I-30, I-20, Loop 820, US-287, Camp Bowie Boulevard, University Drive, Hulen Street, Beach Street, Blue Mound Road, North Tarrant Parkway"], ["Commercial", "Sundance Square, Fort Worth Stockyards, Alliance Town Center, Hulen Mall, Clearfork, Fort Worth Convention Center"], ["Schools", "Texas Christian University, University of North Texas Health Science Center, Texas Wesleyan University, Tarrant County College, Paschal High School"], ["Hospitals", "Texas Health Harris Methodist Hospital Fort Worth, Baylor Scott & White All Saints Medical Center, Cook Children's Medical Center, JPS Health Network, Medical City Fort Worth"]]}, {"city": "Irving, TX", "note": "", "groups": [["Neighborhoods", "Las Colinas, Valley Ranch, University Hills, Heritage District, Downtown Irving, Hackberry Creek, Northgate, Plymouth Park, Bear Creek"], ["Main roads", "SH-114, SH-183, President George Bush Turnpike, I-635, MacArthur Boulevard, O'Connor Road, Belt Line Road, Walnut Hill Lane, Rochelle Road"], ["Commercial", "Toyota Music Factory, Las Colinas Urban Center, Irving Convention Center, The Pavilion at Toyota Music Factory, Irving Mall, Mandalay Canal"], ["Schools", "University of Dallas, North Lake Campus, Nimitz High School, MacArthur High School, Irving High School"], ["Hospitals", "Baylor Scott & White Medical Center – Irving, Medical City Las Colinas, Parkland Irving Health Center"]]}, {"city": "Arlington, TX", "note": "", "groups": [["Neighborhoods", "Downtown Arlington, North Arlington, South Arlington, Central Arlington, East Arlington, Entertainment District, Viridian, Pantego area"], ["Main roads", "I-20, I-30, SH-360, Cooper Street, Collins Street, Matlock Road, Pioneer Parkway, Division Street, Randol Mill Road, Lamar Boulevard"], ["Commercial", "AT&T Stadium, Globe Life Field, Texas Live!, Arlington Highlands, The Parks Mall, Six Flags Over Texas, University of Texas at Arlington"], ["Schools", "University of Texas at Arlington, Tarrant County College Southeast Campus, Martin High School, Lamar High School, Arlington High School"], ["Hospitals", "Medical City Arlington, Texas Health Arlington Memorial Hospital, Methodist Mansfield Medical Center (nearby)"]]}, {"city": "Coppell, TX", "note": "", "groups": [["Neighborhoods", "Old Town Coppell, Northlake Woodlands, Riverchase, Cottonwood Estates, Lakes of Coppell, Parkwood, Coppell Greens"], ["Main roads", "SH-121, SH-114, Denton Tap Road, Belt Line Road, MacArthur Boulevard, Sandy Lake Road, Parkway Boulevard, Freeport Parkway"], ["Commercial", "Old Town Coppell, Coppell Town Center, Cypress Waters, Coppell Arts Center, The Sound at Cypress Waters"], ["Schools", "Coppell High School, New Tech High at Coppell, Coppell Middle School North, Coppell Middle School East"], ["Hospitals", "Medical City Las Colinas, Baylor Scott & White Medical Center – Irving, Texas Health Presbyterian Hospital Flower Mound (nearby)"]]}, {"city": "Denton, TX", "note": "", "groups": [["Neighborhoods", "Downtown Denton, Rayzor Ranch, Southridge, Idiot's Hill, Oak-Hickory Historic District, North Lakes, Robson Ranch, University District"], ["Main roads", "I-35E, I-35W, US-380, Loop 288, University Drive, Teasley Lane, McKinney Street, Bonnie Brae Street, Sherman Drive"], ["Commercial", "Rayzor Ranch Marketplace, Golden Triangle Mall, Downtown Denton Square, Denton Enterprise Airport, North Lakes Park"], ["Schools", "University of North Texas, Texas Woman's University, North Central Texas College, Denton High School, Ryan High School"], ["Hospitals", "Medical City Denton, Texas Health Presbyterian Hospital Denton, University of North Texas Health clinics"]]}, {"city": "Lake Highlands, TX", "note": "Lake Highlands is a neighborhood inside Dallas, not a separate city.", "groups": [["Neighborhoods", "Lake Highlands Estates, White Rock Valley, Lake Highlands North, Merriman Park, Forest Meadow, Town Creek, Moss Farm, Old Lake Highlands"], ["Main roads", "Skillman Street, Audelia Road, Walnut Hill Lane, Royal Lane, Northwest Highway, White Rock Trail, Church Road, Plano Road"], ["Commercial", "Lake Highlands Town Center, White Rock Lake, Flag Pole Hill Park, NorthPark Center (nearby)"], ["Schools", "Lake Highlands High School, Lake Highlands Junior High, White Rock Elementary, Merriman Park Elementary"], ["Hospitals", "Texas Health Presbyterian Hospital Dallas, Medical City Dallas, Baylor Scott & White clinics"]]}, {"city": "Southlake, TX", "note": "", "groups": [["Neighborhoods", "Southlake Town Square, Timarron, Carillon, Shady Oaks, Coventry Manor, Estes Park, Kirkwood Hollow, Myers Meadow"], ["Main roads", "SH-114, SH-26, Southlake Boulevard, FM 1709, Carroll Avenue, White Chapel Boulevard, Davis Boulevard, Byron Nelson Parkway"], ["Commercial", "Southlake Town Square, The Shops of Southlake, Bicentennial Park, Bob Jones Nature Center, Dragon Stadium"], ["Schools", "Carroll Senior High School, Carroll High School, Dawson Middle School, Carroll Middle School"], ["Hospitals", "Baylor Scott & White Medical Center – Grapevine, Texas Health Harris Methodist Hospital Southlake, Medical City Las Colinas (nearby)"]]}, {"city": "Haltom City, TX", "note": "", "groups": [["Neighborhoods", "Haltom City Central, Diamond Oaks, Browning Heights, Fossil Creek area, North Haltom City, East Haltom City"], ["Main roads", "Denton Highway, NE 28th Street, Belknap Street, Haltom Road, Broadway Avenue, Carson Street, Western Center Boulevard, Loop 820"], ["Commercial", "Haltom City Shopping Center, Haltom Plaza, Fossil Creek area, North East Mall (nearby)"], ["Schools", "Haltom High School, Haltom Middle School, Watauga Middle School, Birdville High School"], ["Hospitals", "Medical City North Hills, Texas Health Harris Methodist Hospital Hurst-Euless-Bedford, Baylor Scott & White All Saints (nearby)"]]}]</script>
+<script>
+var AREAS = JSON.parse(document.getElementById("area-data").textContent);
+var key = {
+  "Garland, TX":"Garland","Dallas, TX":"Dallas","Plano, TX":"Plano","Frisco, TX":"Frisco",
+  "Richardson, TX":"Richardson","McKinney, TX":"McKinney","Fort Worth, TX":"Fort Worth",
+  "Irving, TX":"Irving","Arlington, TX":"Arlington","Coppell, TX":"Coppell","Denton, TX":"Denton",
+  "Lake Highlands, TX":"Lake Highlands","Southlake, TX":"Southlake","Haltom City, TX":"Haltom City"
+};
+function esc(v){
+  return String(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function bits(area, label) {
+  var found = area.groups.filter(function (g) { return g[0] === label; })[0];
+  if (!found) return [];
+  return found[1].split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+}
+function pick(area, label, index) {
+  var list = bits(area, label);
+  if (!list.length) return "";
+  return list[index % list.length];
+}
+var SERVICE_LINES = [
+  ["Post construction services", "Commercial", 0, "Main roads", 0],
+  ["Floor cleaning services", "Neighborhoods", 0, "Main roads", 1],
+  ["Carpet cleaning services", "Commercial", 1, "Main roads", 2],
+  ["Window cleaning services", "Neighborhoods", 1, "Main roads", 3],
+  ["Power washing services", "Main roads", 0, "Commercial", 2],
+  ["Concrete sealing services", "Neighborhoods", 2, "Main roads", 4],
+  ["School cleaning services", "Schools", 0, "Main roads", 1],
+  ["Hospital cleaning services", "Hospitals", 0, "Main roads", 0],
+  ["Mall cleaning services", "Commercial", 0, "Neighborhoods", 3],
+  ["Restaurant cleaning services", "Commercial", 1, "Main roads", 2]
+];
+function serviceList(area, city) {
+  return SERVICE_LINES.map(function (row) {
+    var spot = pick(area, row[1], row[2]);
+    var road = pick(area, row[3], row[4]);
+    var side = spot;
+    if (road && road !== spot) side = spot ? spot + " · " + road : road;
+    var title = row[0] + " " + city + ", TX";
+    return "<li><a href=\"/results?city=" + encodeURIComponent(city) + "\">" + esc(title) + "</a><span>" + esc(side) + "</span></li>";
+  }).join("");
+}
+var jump = document.getElementById("jump");
+var root = document.getElementById("cities");
+AREAS.forEach(function (area) {
+  var city = key[area.city];
+  var id = city.toLowerCase().replace(/\s+/g, "-");
+  var a = document.createElement("a");
+  a.href = "#" + id;
+  a.textContent = city;
+  jump.appendChild(a);
+  var card = document.createElement("article");
+  card.id = id;
+  var groups = area.groups.map(function (g) {
+    return "<div><h3>" + esc(g[0]) + "</h3><p>" + esc(g[1]) + "</p></div>";
+  }).join("");
+  card.innerHTML = "<h2>" + esc(area.city) + "</h2>" +
+    (area.note ? "<p class=\"note\">" + esc(area.note) + "</p>" : "") +
+    "<div class=\"photos\" data-city=\"" + esc(city) + "\"></div>" +
+    "<h3 class=\"jobs-h\">Jobs we done in " + esc(city) + ", TX</h3>" +
+    "<ul class=\"svc-list\">" + serviceList(area, city) + "</ul>" +
+    "<div class=\"groups\">" + groups + "</div>";
+  root.appendChild(card);
+});
+fetch("/gallery/jobs.json").then(function (r) { return r.json(); }).then(function (jobs) {
+  document.querySelectorAll(".photos").forEach(function (box) {
+    var city = box.getAttribute("data-city");
+    jobs.filter(function (job) { return job.city === city; }).slice(0, 4).forEach(function (job) {
+      var link = document.createElement("a");
+      link.href = "/results?city=" + encodeURIComponent(city);
+      var img = document.createElement("img");
+      img.src = job.src;
+      img.alt = "Job done at " + job.place + ", " + job.city;
+      img.loading = "lazy";
+      link.appendChild(img);
+      box.appendChild(link);
+    });
+  });
+});
+</script>
+</body>
+</html>

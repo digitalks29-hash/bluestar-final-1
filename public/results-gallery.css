@@ -1,0 +1,101 @@
+#bs-job-gallery {
+  position: relative;
+  z-index: 3;
+  width: min(1180px, calc(100% - 40px));
+  margin: 12px auto 72px;
+  opacity: 1 !important;
+  transform: none !important;
+  font-family: Sora, sans-serif;
+}
+#bs-job-gallery .bs-gallery-title {
+  margin: 0 0 8px;
+  color: #0b0232;
+  font-family: Anton, sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 0.95;
+}
+#bs-job-gallery .bs-lead {
+  margin: 0 0 16px;
+  max-width: 760px;
+  color: #3c3654;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#bs-job-gallery .bs-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+#bs-job-gallery .bs-filters button {
+  border: 1px solid rgba(11, 2, 50, 0.16);
+  background: #fff;
+  color: #0b0232;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font: 600 13px/1 Sora, sans-serif;
+  cursor: pointer;
+}
+#bs-job-gallery .bs-filters button.on {
+  background: #0b0232;
+  color: #ffcc37;
+  border-color: #0b0232;
+}
+#bs-job-gallery .bs-job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+#bs-job-gallery .bs-job {
+  margin: 0;
+  background: #fffdf6;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(11, 2, 50, 0.08);
+}
+#bs-job-gallery .bs-job img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #efe8d4;
+}
+#bs-job-gallery figcaption {
+  padding: 12px 14px 14px;
+}
+#bs-job-gallery .bs-svc {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #ffcc37;
+  color: #0b0232;
+  font: 700 11px/1 Sora, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+#bs-job-gallery .bs-where {
+  margin: 0;
+  color: #0b0232;
+  font: 700 15px/1.35 Sora, sans-serif;
+}
+#bs-job-gallery .bs-loc {
+  margin: 4px 0 0;
+  color: #5c5670;
+  font: 500 13px/1.35 Sora, sans-serif;
+}
+@media (max-width: 980px) {
+  #bs-job-gallery .bs-job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  #bs-job-gallery {
+    width: calc(100% - 24px);
+  }
+  #bs-job-gallery .bs-job-grid {
+    grid-template-columns: 1fr;
+  }
+}

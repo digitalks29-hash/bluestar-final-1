@@ -1,0 +1,59 @@
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "../components/team-lanyard-rail.tsx";
+@source "./review-rail.tsx";
+
+@theme {
+  --font-sans: "Sora", "Sora Placeholder", sans-serif;
+  --color-background: #fdf8e6;
+  --color-foreground: #0b0232;
+  --color-card: #fffdf8;
+  --color-card-foreground: #0b0232;
+  --color-muted: #efe6cf;
+  --color-muted-foreground: #5c5678;
+  --color-border: #e3d9c0;
+  --color-ring: #4219fa;
+  --color-chart-1: #4219fa;
+  --color-chart-2: #1f6feb;
+  --color-chart-3: #c8962e;
+  --color-chart-4: #0f8a72;
+  --color-chart-5: #d4532b;
+}
+
+#bs-review-rail,
+#bs-review-rail button,
+#bs-review-rail a {
+  font-family: "Sora", "Sora Placeholder", sans-serif;
+}
+
+#bs-review-rail {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+#bs-review-rail .bs-google-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #4219fa;
+  color: #fdf8e6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(66, 25, 250, 0.18);
+}
+
+#bs-review-rail .bs-google-link:hover {
+  background: #3212c9;
+}
+
+#bs-review-rail .bs-google-link:focus-visible {
+  outline: 2px solid #4219fa;
+  outline-offset: 3px;
+}

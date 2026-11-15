@@ -1,0 +1,146 @@
+.bs-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: calc(100% - 60px);
+  text-decoration: none;
+  color: #0b0232;
+  font-family: "Sora", "Sora Placeholder", sans-serif;
+  line-height: 1.15;
+}
+
+.bs-loc {
+  margin-left: 8px;
+}
+
+.bs-hours {
+  margin-right: 4px;
+  text-align: right;
+}
+
+.bs-hours .bs-copy {
+  align-items: flex-end;
+}
+
+.bs-pin {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: rgba(66, 25, 250, 0.1);
+  color: #4219fa;
+}
+
+.bs-hours .bs-pin {
+  order: 2;
+  background: rgba(200, 150, 46, 0.18);
+  color: #8a6412;
+}
+
+.bs-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.bs-kicker {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6d6784;
+}
+
+.bs-main {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0b0232;
+  white-space: nowrap;
+}
+
+.bs-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5c5678;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#how-it-works {
+  position: relative;
+}
+
+#bs-home-links {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 36px;
+  display: flex;
+  gap: 12px;
+  transform: translateX(-50%);
+}
+
+#bs-home-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: #fdf8e6;
+  color: #0b0232;
+  font-family: Sora, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(11, 2, 50, 0.16);
+}
+
+#bs-home-links a:hover {
+  background: #ffcc37;
+}
+
+@media (max-width: 700px) {
+  #bs-home-links {
+    width: calc(100% - 28px);
+    top: 28px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #bs-home-links a {
+    min-width: 0;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .bs-sub {
+    display: none;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .bs-chip {
+    gap: 6px;
+    max-width: calc(100% - 48px);
+  }
+  .bs-pin {
+    width: 22px;
+    height: 22px;
+  }
+  .bs-kicker {
+    display: none;
+  }
+  .bs-main {
+    font-size: 11px;
+  }
+  .bs-loc {
+    margin-left: 4px;
+  }
+}
