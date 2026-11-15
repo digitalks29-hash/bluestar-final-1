@@ -54,8 +54,65 @@
     }
   }
 
+  function yellowLinks() {
+    var section = document.getElementById("before-after");
+    if (!section) return;
+    var banners = section.querySelectorAll('[data-framer-name="Custom Quote Banner"]');
+    var visible = null;
+    for (var i = 0; i < banners.length; i++) {
+      if (banners[i].offsetHeight > 20 && getComputedStyle(banners[i]).display !== "none") {
+        visible = banners[i];
+        break;
+      }
+    }
+    if (!visible) return;
+    var anchor = visible;
+    var parent = visible.parentElement;
+    if (
+      parent &&
+      parent !== section &&
+      !parent.querySelector('[data-framer-name="Bottom Wave"]') &&
+      parent.parentElement &&
+      parent.parentElement.querySelector('[data-framer-name="Bottom Wave"]')
+    ) {
+      anchor = parent;
+    }
+    var bar = document.getElementById("bs-yellow-links");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.id = "bs-yellow-links";
+      bar.innerHTML =
+        '<div class="bs-yl-copy"><span class="bs-yl-kicker">✦ Our work</span><strong>See the jobs we done and where we serve.</strong></div>' +
+        '<div class="bs-yl-actions"><a href="/results">Jobs We Done</a><a href="/areas">Where We Serve</a></div>';
+    }
+    if (bar.previousElementSibling !== anchor) anchor.insertAdjacentElement("afterend", bar);
+    bar.style.width = anchor.offsetWidth + "px";
+    var wave = section.querySelector('[data-framer-name="Bottom Wave"]');
+    var flow = anchor.parentElement;
+    var end = bar.offsetTop + bar.offsetHeight + 20;
+    if (flow && flow !== section) flow.style.minHeight = end + "px";
+    var waveH = wave ? wave.offsetHeight : 0;
+    var sectionEnd = (flow && flow !== section ? flow.offsetTop : 0) + end + waveH;
+    if (section.offsetHeight < sectionEnd) section.style.height = sectionEnd + "px";
+    if (wave) wave.style.top = section.offsetHeight - waveH + "px";
+  }
+
+  function credit() {
+    var line = document.getElementById("bs-credit");
+    if (!line) {
+      line = document.createElement("div");
+      line.id = "bs-credit";
+      line.innerHTML =
+        'Website Designed By <a href="https://digitalksco.com" target="_blank" rel="noopener noreferrer">Digi Talk Solutions</a> · <a href="https://digitalksco.com" target="_blank" rel="noopener noreferrer">Digitalksco.com</a>';
+    }
+    var root = document.querySelector("[data-framer-root]") || document.body;
+    if (line.parentElement !== root) root.appendChild(line);
+  }
+
   function apply() {
     homeButtons();
+    yellowLinks();
+    credit();
     document.querySelectorAll('a[href="./results"], a[href="/results"]').forEach(function (a) {
       if (a.closest("#bs-home-links") || !a.querySelector("p")) return;
       var parent = a.parentElement;
